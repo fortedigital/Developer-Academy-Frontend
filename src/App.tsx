@@ -1,12 +1,12 @@
 import React from 'react';
 import { Footer } from './components/Footer';
 import { Header } from './components/Header';
-import { Home } from './pages/Home';
+import { Order } from './pages/Order';
 function App() {
   return (
     <div>
       <Header />
-      <Home />
+      <Order />
       <Footer />
     </div>
   );
