@@ -10,7 +10,7 @@ function App() {
   const [cart, setCart] = useState<IShoppingCart[]>([]);
   return (
     <>
-      {/*Add Router */}
+      {/*TODO: Add React Router */}
       <ShoppingCartContext.Provider value={[cart, setCart]}>
         <Header />
         <Order />

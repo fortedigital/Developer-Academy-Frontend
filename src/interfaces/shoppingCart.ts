@@ -1,1 +1,3 @@
-export interface IShoppingCart {}
+export interface IShoppingCart {
+  //TODO: Implement interface
+}

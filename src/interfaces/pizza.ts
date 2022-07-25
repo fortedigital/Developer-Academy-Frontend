@@ -1,1 +1,3 @@
-export interface IPizza {}
+export interface IPizza {
+  //TODO: Implement interface
+}
