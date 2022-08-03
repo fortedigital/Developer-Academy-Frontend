@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Footer } from './components/Footer';
 import { Header } from './components/Header';
 import { Order } from './pages/Order';
 import { IShoppingCart } from './interfaces/shoppingCart';
