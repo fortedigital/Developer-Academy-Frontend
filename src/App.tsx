@@ -8,7 +8,7 @@ import { NotFound } from './pages/NotFound';
 const ShoppingCartContext = React.createContext<IShoppingCart>([]);
 
 function App() {
-  const [cart, setCart] = useState<IShoppingCart[]>([]);
+  const [cart, setCart] = useState<IShoppingCart>({} as IShoppingCart);
   return (
     <ShoppingCartContext.Provider value={[cart, setCart]}>
       <Header />

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { IPizza } from '../interfaces/pizza';
+import { PizzaCard } from '../components/PizzaCard';
 
 export const Order = () => {
   const [pizzas, setPizzas] = useState<IPizza[]>([
