@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function Header() {
   return (
     <header className="bg-stone-700">
-      <div className="container mx-auto flex h-16 items-center gap-x-6 px-4 text-white">
+      <div className="mx-auto flex h-16 max-w-screen-2xl items-center gap-x-6 px-6 text-white">
         <h1 className="mr-auto text-center text-2xl font-bold">
           Pizzeria Forte
         </h1>
