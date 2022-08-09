@@ -1,14 +1,30 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   return (
-    <div className='bg-gray-300' id="header">
-      <h1>Pizza-website</h1>
-      {/*TODO: Add Routing*/}
-      <p>Bestill</p>
-      <p>Mine Bestillinger</p>
-      {/*TODO: Auth */}
-      <p>Logg inn</p>
-    </div>
+    <header className="bg-stone-700">
+      <div className="container mx-auto flex h-16 items-center gap-x-6 px-4 text-white">
+        <h1 className="mr-auto text-center text-2xl font-bold">
+          Pizzeria Forte
+        </h1>
+        <div className="flex items-center gap-x-6">
+          {/*TODO: Add Routing*/}
+          <Link className="underline-offset-4 hover:underline" to="/">
+            Bestill
+          </Link>
+          <Link
+            className="underline-offset-4 hover:underline"
+            to="/mine-bestillinger"
+          >
+            Mine Bestillinger
+          </Link>
+          {/*TODO: Auth */}
+          <button className="flex-none rounded bg-stone-500 px-4 py-2 font-bold hover:bg-stone-400 active:bg-stone-600">
+            Logg inn
+          </button>
+        </div>
+      </div>
+    </header>
   );
 };

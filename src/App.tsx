@@ -11,15 +11,15 @@ function App() {
   const [cart, setCart] = useState<IShoppingCart>({} as IShoppingCart);
   return (
     <ShoppingCartContext.Provider value={[cart, setCart]}>
-      <div className="h-screen bg-white">
-        <Header />
-        <BrowserRouter>
+      <BrowserRouter>
+        <div className="h-screen bg-white">
+          <Header />
           <Routes>
             <Route path="/" element={<Order />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </BrowserRouter>
-      </div>
+        </div>
+      </BrowserRouter>
     </ShoppingCartContext.Provider>
   );
 }
