@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Header = () => {
   return (
-    <div id="header">
+    <div className='bg-gray-300' id="header">
       <h1>Pizza-website</h1>
       {/*TODO: Add Routing*/}
       <p>Bestill</p>
