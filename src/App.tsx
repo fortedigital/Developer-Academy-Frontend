@@ -5,13 +5,13 @@ import { IShoppingCart } from "./interfaces/shoppingCart";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { NotFound } from "./pages/NotFound";
 
-const ShoppingCartContext = React.createContext<IShoppingCart>([]);
+export const ShoppingCartContext = React.createContext<IShoppingCart>([]);
 
 function App() {
   const [cart, setCart] = useState<IShoppingCart>({} as IShoppingCart);
   return (
     <ShoppingCartContext.Provider value={[cart, setCart]}>
-      <div className="bg-white h-screen">
+      <div className="h-screen bg-white">
         <Header />
         <BrowserRouter>
           <Routes>

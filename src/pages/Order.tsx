@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
-import { IPizza } from '../interfaces/pizza';
-import { PizzaCard } from '../components/PizzaCard';
+import React, { useState } from "react";
+import { IPizza } from "../interfaces/pizza";
+import { PizzaCard } from "../components/PizzaCard";
+import { ShoppingCartContext } from "../App";
 
 export const Order = () => {
   const [pizzas, setPizzas] = useState<IPizza[]>([
-    { name: 'Margarita' },
-    { name: 'Prosciutto' },
-    { name: 'Funghi' },
-    { name: 'Hawaii' },
+    { name: "Margarita" },
+    { name: "Prosciutto" },
+    { name: "Funghi" },
+    { name: "Hawaii" },
   ]);
   return (
     <div id="order">

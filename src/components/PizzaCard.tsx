@@ -1,5 +1,5 @@
-import React from 'react';
-import { IPizza } from '../interfaces/pizza';
+import React from "react";
+import { IPizza } from "../interfaces/pizza";
 
 export const PizzaCard = (pizza: IPizza) => {
   return (
