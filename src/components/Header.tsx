@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export const Header = () => {
+export default function Header() {
   return (
     <header className="bg-stone-700">
       <div className="container mx-auto flex h-16 items-center gap-x-6 px-4 text-white">
@@ -26,4 +26,4 @@ export const Header = () => {
       </div>
     </header>
   );
-};
+}
