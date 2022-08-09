@@ -9,7 +9,6 @@ export const Header = () => {
           Pizzeria Forte
         </h1>
         <div className="flex items-center gap-x-6">
-          {/*TODO: Add Routing*/}
           <Link className="underline-offset-4 hover:underline" to="/">
             Bestill
           </Link>

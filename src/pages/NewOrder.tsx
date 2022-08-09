@@ -3,7 +3,7 @@ import { IPizza } from "../interfaces/pizza";
 import { PizzaCard } from "../components/PizzaCard";
 import { ShoppingCartContext } from "../App";
 
-export const Order = () => {
+export default function NewOrder() {
   const [pizzas, setPizzas] = useState<IPizza[]>([
     { name: "Margarita" },
     { name: "Prosciutto" },
@@ -23,4 +23,4 @@ export const Order = () => {
       </div>
     </div>
   );
-};
+}
