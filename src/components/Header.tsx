@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import Button from "./Button";
+
 export default function Header() {
   return (
     <header className="bg-stone-700">
@@ -19,9 +21,7 @@ export default function Header() {
             Mine Bestillinger
           </Link>
           {/*TODO: Auth */}
-          <button className="flex-none rounded bg-stone-500 px-4 py-2 font-bold hover:bg-stone-400 active:bg-stone-600">
-            Logg inn
-          </button>
+          <Button variant="secondary">Logg inn</Button>
         </div>
       </div>
     </header>
