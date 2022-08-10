@@ -7,7 +7,7 @@ type Props = {
 
 const PizzaCard = ({ pizza }: Props) => {
   return (
-    <div className="p-4 h-52 items-center justify-center border border-gray-200">
+    <div className="h-52 items-center justify-center border border-gray-200 bg-white p-4">
       <p>{pizza.name}</p>
       <p>{pizza.price} kr</p>
     </div>
