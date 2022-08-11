@@ -35,7 +35,7 @@ const Field = ({ label, value }: FieldProps) => (
 
 export default function OrderCard({ order }: OrderCardProps) {
   return (
-    <button className="grid max-w-3xl grid-cols-2 items-center gap-4 rounded-md border border-gray-200 bg-white py-4 px-6 text-left hover:shadow-md sm:grid-cols-4">
+    <button className="grid max-w-4xl grid-cols-2 items-center gap-4 rounded-md border border-gray-300 bg-white py-4 px-6 text-left hover:shadow-md sm:grid-cols-4">
       <Field label="Dato" value={order.date.toLocaleDateString("no-NB")} />
       <Field label="Pris" value={`${order.price} kr`} />
       <Field label="Antall pizzaer" value={`${order.items.length} stk.`} />
