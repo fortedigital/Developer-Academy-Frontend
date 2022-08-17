@@ -1,15 +1,22 @@
 import React from "react";
 import { IPizza } from "../interfaces/pizza";
+import Button from "./Button";
 
 type Props = {
   pizza: IPizza;
+  onAddToOrder?: () => void;
 };
 
-const PizzaCard = ({ pizza }: Props) => {
+const PizzaCard = ({ pizza, onAddToOrder }: Props) => {
   return (
-    <div className="h-52 items-center justify-center border border-gray-300 bg-white p-4">
+    <div className="h-52 border border-gray-300 bg-white p-4">
       <p>{pizza.name}</p>
-      <p>{pizza.price} kr</p>
+      <Button onClick={onAddToOrder} variant="outlined">Legg til</Button>
+      {/*
+      TODO: 
+      - Vis pizza-pris
+      - Legg til Add to order-knapp
+      */}
     </div>
   );
 };
