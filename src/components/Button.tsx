@@ -1,7 +1,7 @@
 import React from "react";
 
 type Props = {
-  variant?: "primary" | "secondary" | "outlined";
+  variant?: "primary" | "secondary" | "outlined" | "ghost";
   size?: "large" | "small";
   onClick?: () => void;
   children?: string;
@@ -16,13 +16,15 @@ export default function Button({
   return (
     <button
       onClick={onClick}
-      className={`rounded-md  py-2 font-bold text-white
+      className={`rounded-md py-2 font-bold text-white
       ${size === "large" ? "px-6" : "px-4 py-2 text-sm"} ${
         variant === "primary"
           ? "bg-red-600 hover:bg-red-500 active:bg-red-700"
           : variant === "secondary"
           ? "bg-stone-500 hover:bg-stone-400 active:bg-stone-600"
-          : "border border-stone-600 bg-white text-stone-600 hover:bg-stone-100 active:bg-stone-200"
+          : variant === "outlined"
+          ? "border border-stone-600 bg-white text-stone-600 hover:bg-stone-100 active:bg-stone-200"
+          : "text-stone-600 hover:bg-stone-100 active:bg-stone-200"
       }`}
     >
       {children}
