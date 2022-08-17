@@ -2,19 +2,22 @@ import React from "react";
 
 type Props = {
   variant?: "primary" | "secondary" | "outlined";
+  size?: "large" | "small";
   onClick?: () => void;
   children?: string;
 };
 
 export default function Button({
   variant = "primary",
+  size = "large",
   children,
   onClick,
 }: Props) {
   return (
     <button
       onClick={onClick}
-      className={`rounded-md px-6 py-2 font-bold text-white ${
+      className={`rounded-md  py-2 font-bold text-white
+      ${size === "large" ? "px-6" : "px-4 py-2 text-sm"} ${
         variant === "primary"
           ? "bg-red-600 hover:bg-red-500 active:bg-red-700"
           : variant === "secondary"

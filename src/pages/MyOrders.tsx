@@ -8,7 +8,7 @@ export default function MyOrders() {
     {
       id: "43423",
       orderedBy: "1278",
-      items: [{ name: "Hawaii", price: 175 }],
+      items: ["4bng43"],
       price: 175,
       date: new Date(),
       status: "ORDERED",
@@ -16,7 +16,7 @@ export default function MyOrders() {
     {
       id: "43423",
       orderedBy: "1278",
-      items: [{ name: "Hawaii", price: 175 }],
+      items: ["4bng43"],
       price: 175,
       date: new Date(),
       status: "IN_PROGRESS",
@@ -24,7 +24,7 @@ export default function MyOrders() {
     {
       id: "43423",
       orderedBy: "1278",
-      items: [{ name: "Hawaii", price: 175 }],
+      items: ["4bng43"],
       price: 175,
       date: new Date(),
       status: "DELIVERED",
