@@ -1,43 +1,26 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Heading from "../components/Heading";
-import OrderCard from "../components/OrderCard";
+import OrderItem from "../components/OrderItem";
 import { IOrder } from "../interfaces/order";
+import { dummyOrders } from "../data/dummyOrders";
 
 export default function MyOrders() {
-  const [orders, setOrders] = useState<IOrder[]>([
-    {
-      id: "43423",
-      orderedBy: "1278",
-      items: ["4bng43"],
-      price: 175,
-      date: new Date(),
-      status: "ORDERED",
-    },
-    {
-      id: "43423",
-      orderedBy: "1278",
-      items: ["4bng43"],
-      price: 175,
-      date: new Date(),
-      status: "IN_PROGRESS",
-    },
-    {
-      id: "43423",
-      orderedBy: "1278",
-      items: ["4bng43"],
-      price: 175,
-      date: new Date(),
-      status: "DELIVERED",
-    },
-  ]);
+  const [orders, setOrders] = useState<IOrder[]>([]);
+
+  useEffect(() => {
+    setOrders(dummyOrders as IOrder[]);
+  }, []);
 
   return (
     <div className="w-full p-6">
       <Heading>Mine bestillinger</Heading>
-      <div className="grid gap-4">
-        {orders.map((order, index) => (
-          <OrderCard order={order} key={index} />
-        ))}
+      <div className="flex gap-x-4">
+        <div className="grid grid-cols-1 divide-y divide-gray-500">
+          {orders.map((order, index) => (
+            <OrderItem order={order} key={index} />
+          ))}
+        </div>
+        {/* <div className="border border-gray-300 bg-white grow">Detaljer</div> */}
       </div>
     </div>
   );
