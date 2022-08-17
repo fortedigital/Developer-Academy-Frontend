@@ -4,7 +4,7 @@ import Button from "./Button";
 
 type Props = {
   pizza: IPizza;
-  onAddToOrder?: () => void;
+  onAddToOrder: (pizza: IPizza) => void;
 };
 
 const PizzaCard = ({ pizza, onAddToOrder }: Props) => {
@@ -15,7 +15,11 @@ const PizzaCard = ({ pizza, onAddToOrder }: Props) => {
           <p className="mb-2">{pizza.name}</p>
           <p className="text-lg font-bold">{pizza.price} kr</p>
         </div>
-        <Button onClick={onAddToOrder} variant="outlined" size="small">
+        <Button
+          onClick={() => onAddToOrder(pizza)}
+          variant="outlined"
+          size="small"
+        >
           Legg til
         </Button>
       </div>

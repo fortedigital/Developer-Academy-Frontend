@@ -5,42 +5,38 @@ import PizzaCard from "../components/PizzaCard";
 import ShoppingCart from "../components/ShoppingCart";
 
 import { IPizza } from "../interfaces/pizza";
-import { ShoppingCartContext } from "../App";
 import { fetchAllPizzas } from "../api/fetchAllPizzas";
+import { dummyPizzas } from "../data/dummyPizzas";
 
 export default function NewOrder() {
-  const dummyImage =
-    "https://images.unsplash.com/photo-1628840042765-356cda07504e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80";
-
-  const [pizzas, setPizzas] = useState<IPizza[]>([
-    {
-      name: "Margarita (DUMMY)",
-      price: 140,
-      image: dummyImage,
-    },
-    {
-      name: "Prosciutto (DUMMY)",
-      price: 180,
-      image: dummyImage,
-    },
-    {
-      name: "Funghi (DUMMY)",
-      price: 160,
-      image: dummyImage,
-    },
-    {
-      name: "Hawaii (DUMMY)",
-      price: 175,
-      image: dummyImage,
-    },
-  ]);
+  const [pizzas, setPizzas] = useState<IPizza[]>([]);
+  const [shoppingCartItems, setShoppingCartItems] = useState<IPizza[]>([]);
 
   useEffect(() => {
+    setPizzas(dummyPizzas);
     /* TODO: hent pizzaer fra API og legg dem til i pizzas-state */
   }, []);
 
   const handleAddToOrder = (pizza: IPizza) => {
+    setShoppingCartItems((shoppingCartItems) => [...shoppingCartItems, pizza]);
     /* TODO: legg til valgt pizza i handlekurv med ShoppingCartContext */
+  };
+
+  const handleRemoveFromOrder = (pizzaIndex: number) => {
+    const updatedItems = shoppingCartItems.filter(
+      (_, index) => index !== pizzaIndex
+    );
+
+    setShoppingCartItems(updatedItems);
+  };
+
+  const handleCompleteOrder = () => {
+    alert(
+      "Completing order! \n\n" +
+        shoppingCartItems.map((item) => item.name + "\n").join("")
+    );
+
+    setShoppingCartItems([]);
   };
 
   return (
@@ -52,13 +48,17 @@ export default function NewOrder() {
           {pizzas.map((pizza, index) => (
             <PizzaCard
               pizza={pizza}
-              onAddToOrder={() => handleAddToOrder(pizza)}
+              onAddToOrder={handleAddToOrder}
               key={index}
             />
           ))}
         </div>
       </div>
-      <ShoppingCart />
+      <ShoppingCart
+        items={shoppingCartItems}
+        onRemoveFromOrder={handleRemoveFromOrder}
+        onCompleteOrder={handleCompleteOrder}
+      />
     </div>
   );
 }
