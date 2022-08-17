@@ -5,7 +5,7 @@ import Button from "./Button";
 
 export default function Header() {
   return (
-    <header className="bg-stone-700">
+    <header className="sticky top-0 z-10 bg-stone-700">
       <div className="mx-auto flex h-16 max-w-screen-2xl items-center gap-x-6 px-6 text-white">
         <h1 className="mr-auto text-center text-2xl font-bold">
           Pizzeria Forte

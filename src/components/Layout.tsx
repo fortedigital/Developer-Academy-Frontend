@@ -7,9 +7,9 @@ type Props = {
 
 export default function Layout({ children }: Props) {
   return (
-    <div className="flex h-screen flex-col bg-stone-50">
+    <div className="absolute inset-0 flex flex-col bg-stone-50">
       <Header />
-      <div className="grow">{children}</div>
+      <div className="flex h-full overflow-y-hidden">{children}</div>
     </div>
   );
 }

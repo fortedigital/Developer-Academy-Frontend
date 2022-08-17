@@ -32,7 +32,7 @@ export default function MyOrders() {
   ]);
 
   return (
-    <div className="p-6">
+    <div className="w-full p-6">
       <Heading>Mine bestillinger</Heading>
       <div className="grid gap-4">
         {orders.map((order, index) => (
