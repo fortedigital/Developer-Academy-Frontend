@@ -19,7 +19,7 @@ export default function NewOrder() {
 
   const handleAddToOrder = (pizza: IPizza) => {
     setShoppingCartItems((shoppingCartItems) => [...shoppingCartItems, pizza]);
-    /* TODO: legg til valgt pizza i handlekurv med ShoppingCartContext */
+    /* TODO: legg til valgt pizza i handlekurv-state */
   };
 
   const handleRemoveFromOrder = (pizzaIndex: number) => {
@@ -40,7 +40,7 @@ export default function NewOrder() {
   };
 
   return (
-    <div className="flex w-full" id="order">
+    <div className="flex w-full" id="new-order">
       <div className="grow overflow-y-auto p-6">
         <Heading>Bestill</Heading>
         <div className="grid grid-cols-2 gap-4">

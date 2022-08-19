@@ -2,6 +2,12 @@ import React from "react";
 import { IPizza } from "../interfaces/pizza";
 import Button from "./Button";
 
+type ShoppingCartProps = {
+  items: IPizza[];
+  onCompleteOrder: () => void;
+  onRemoveFromOrder: (pizzaIndex: number) => void;
+};
+
 type ShoppingCartItemProps = {
   pizza: IPizza;
   onRemove: () => void;
@@ -21,12 +27,6 @@ const ShoppingCartItem = ({ pizza, onRemove }: ShoppingCartItemProps) => {
   );
 };
 
-type ShoppingCartProps = {
-  items: IPizza[];
-  onCompleteOrder: () => void;
-  onRemoveFromOrder: (pizzaIndex: number) => void;
-};
-
 export default function ShoppingCart({
   items,
   onCompleteOrder,
@@ -37,16 +37,15 @@ export default function ShoppingCart({
       (accumulator, item) => accumulator + item.price,
       0
     );
-
     return totalPrice;
   };
 
   return (
     <div
       className="flex w-72 flex-col border-l border-stone-500 lg:w-96"
-      id="shoppingcart"
+      id="shopping-cart"
     >
-      <div className="grow  overflow-auto p-6">
+      <div className="grow overflow-auto p-6">
         <h2 className="mb-4 text-2xl font-bold">Handlekurv</h2>
         <div className="grid grid-cols-1 divide-y divide-stone-300">
           {items.map((item, index) => (
