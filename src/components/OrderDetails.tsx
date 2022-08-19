@@ -31,6 +31,7 @@ export default function OrderDetails({ order }: OrderDetailsProps) {
         {order.items.map((item, index) => (
           <DetailsItem name={item.name} price={item.price} key={index} />
         ))}
+        {/*TODO: list ut alle pizzaene i bestillingen som DetailsItem*/}
       </div>
       <p className="mt-8 border-t border-stone-500 py-4">
         Totalpris: <span className="font-bold">{order.price} kr</span>

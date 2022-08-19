@@ -28,6 +28,7 @@ export default function MyOrders() {
               key={index}
             />
           ))}
+          {/*TODO: list ut alle bestillingene i orders-state som OrderItem*/}
         </div>
         {selectedOrder && <OrderDetails order={selectedOrder} />}
       </div>

@@ -19,7 +19,7 @@ export default function NewOrder() {
 
   const handleAddToOrder = (pizza: IPizza) => {
     setShoppingCartItems((shoppingCartItems) => [...shoppingCartItems, pizza]);
-    /* TODO: legg til valgt pizza i handlekurv-state */
+    /* TODO: legg til valgt pizza i shoppingCartItems-state */
   };
 
   const handleRemoveFromOrder = (pizzaIndex: number) => {
@@ -44,7 +44,7 @@ export default function NewOrder() {
       <div className="grow overflow-y-auto p-6">
         <Heading>Bestill</Heading>
         <div className="grid grid-cols-2 gap-4">
-          {/*TODO: list ut alle pizzaene som PizzaCard*/}
+          {/*TODO: list ut alle pizzaene i pizzas-state som PizzaCard*/}
           {pizzas.map((pizza, index) => (
             <PizzaCard
               pizza={pizza}
