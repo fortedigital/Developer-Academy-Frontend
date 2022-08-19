@@ -3,25 +3,25 @@ const dummyImage =
 
 export const dummyPizzas = [
   {
-    id: "id4727426",
+    id: "id_marg",
     name: "Margarita (DUMMY)",
     price: 140,
     image: dummyImage,
   },
   {
-    id: "1244365",
+    id: "id_prosc",
     name: "Prosciutto (DUMMY)",
     price: 180,
     image: dummyImage,
   },
   {
-    id: "5643",
+    id: "id_funghi",
     name: "Funghi (DUMMY)",
     price: 160,
     image: dummyImage,
   },
   {
-    id: "g4567345",
+    id: "id_hawaii",
     name: "Hawaii (DUMMY)",
     price: 175,
     image: dummyImage,
