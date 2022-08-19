@@ -2,8 +2,9 @@ import React from "react";
 import { IOrder } from "../interfaces/order";
 import Button from "./Button";
 
-type OrderCardProps = {
+type OrderItemProps = {
   order: IOrder;
+  onCheckDetails: () => void;
 };
 
 type FieldProps = {
@@ -18,18 +19,19 @@ const statusLabels = {
 };
 
 const Field = ({ label, value }: FieldProps) => (
-  <div className="w-24">
+  <div className="w-32">
     <p className="text-sm text-gray-500">{label}</p>
     <p>{value}</p>
   </div>
 );
 
-export default function OrderItem({ order }: OrderCardProps) {
+export default function OrderItem({ order, onCheckDetails }: OrderItemProps) {
   return (
-    <div className="flex items-center gap-16 py-4 ">
+    <div className="flex items-center gap-16 py-4">
       <Field label="Dato" value={order.date.toLocaleDateString("no-NB")} />
       <Field label="Pris" value={`${order.price} kr`} />
       <Field label="Antall pizzaer" value={`${order.items.length} stk.`} />
+      {/* <Field label="Status" value={statusLabels[order.status]} /> */}
       <div className="w-24">
         <p className="text-sm text-gray-500">Status</p>
         <p
@@ -44,16 +46,7 @@ export default function OrderItem({ order }: OrderCardProps) {
           {statusLabels[order.status]}
         </p>
       </div>
-      <Button
-        onClick={() =>
-          alert(
-            "Bestilling: \n\n" +
-              order.items.map((item) => item + "\n").join("")
-          )
-        }
-        variant="ghost"
-        size="small"
-      >
+      <Button onClick={() => onCheckDetails()} variant="ghost" size="small">
         Se detaljer
       </Button>
     </div>

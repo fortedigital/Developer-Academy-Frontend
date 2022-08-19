@@ -43,12 +43,12 @@ export default function ShoppingCart({
 
   return (
     <div
-      className="flex w-72 flex-col border-l border-stone-500 xl:w-96"
+      className="flex w-72 flex-col border-l border-stone-500 lg:w-96"
       id="shoppingcart"
     >
       <div className="grow  overflow-auto p-6">
         <h2 className="mb-4 text-2xl font-bold">Handlekurv</h2>
-        <div className="grid grid-cols-1 divide-y divide-gray-500">
+        <div className="grid grid-cols-1 divide-y divide-stone-300">
           {items.map((item, index) => (
             <ShoppingCartItem
               pizza={item}
