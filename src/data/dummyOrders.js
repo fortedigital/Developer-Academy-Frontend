@@ -1,7 +1,22 @@
-const dummyImage =
-  "https://images.unsplash.com/photo-1628840042765-356cda07504e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80";
-
 export const dummyOrders = [
+  {
+    orderId: 0,
+    pizza: ["Basic Cheese Pizza", "Ham, ham and ham", "Veggie deluxe"],
+    price: 450,
+  },
+  {
+    orderId: 1,
+    pizza: ["Ham, ham and ham", "Funghi"],
+    price: 320,
+  },
+  {
+    orderId: 2,
+    pizza: ["Margherita"],
+    price: 110,
+  },
+];
+
+/* [
   {
     id: "434243",
     orderedBy: "1278",
@@ -86,4 +101,4 @@ export const dummyOrders = [
     date: new Date(2022, 6, 25),
     status: "DELIVERED",
   },
-];
+]; */

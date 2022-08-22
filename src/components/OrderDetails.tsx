@@ -7,14 +7,12 @@ type OrderDetailsProps = {
 
 type DetailsItemProps = {
   name: string;
-  price: number;
 };
 
-const DetailsItem = ({ name, price }: DetailsItemProps) => {
+const DetailsItem = ({ name }: DetailsItemProps) => {
   return (
     <div className="flex items-center justify-between py-4">
       <p>{name}</p>
-      <p className="font-bold">{price} kr</p>
     </div>
   );
 };
@@ -26,10 +24,10 @@ export default function OrderDetails({ order }: OrderDetailsProps) {
       id="order-details"
     >
       <h2 className="mb-4 text-xl font-bold">Ordredetaljer</h2>
-      <p className="mb-4 text-gray-500">Ordrenummer: {order.id}</p>
+      <p className="mb-4 text-gray-500">Ordrenummer: {order.orderId}</p>
       <div className="grid grid-cols-1 divide-y divide-stone-300 overflow-y-auto">
-        {order.items.map((item, index) => (
-          <DetailsItem name={item.name} price={item.price} key={index} />
+        {order.pizza.map((pizzaItem, index) => (
+          <DetailsItem name={pizzaItem} key={index} />
         ))}
         {/*TODO: list ut alle pizzaene i bestillingen som DetailsItem*/}
       </div>

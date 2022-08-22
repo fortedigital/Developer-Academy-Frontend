@@ -1,10 +1,12 @@
 import { IPizza } from "./pizza";
 
 export interface IOrder {
-  id: string;
-  orderedBy: string;
-  items: IPizza[];
+  orderId: number;
+  pizza: string[];
   price: number;
-  date: Date;
-  status: "ORDERED" | "IN_PROGRESS" | "DELIVERED";
+}
+
+export interface IPostOrder {
+  userId: number;
+  pizzaIds: number[];
 }

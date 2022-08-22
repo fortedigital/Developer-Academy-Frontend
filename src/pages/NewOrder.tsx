@@ -5,16 +5,18 @@ import PizzaCard from "../components/PizzaCard";
 import ShoppingCart from "../components/ShoppingCart";
 
 import { IPizza } from "../interfaces/pizza";
+import { IPostOrder } from "../interfaces/order";
 import { fetchAllPizzas } from "../api/fetchAllPizzas";
 import { dummyPizzas } from "../data/dummyPizzas";
+import { postOrder} from "../api/postOrder";
 
 export default function NewOrder() {
   const [pizzas, setPizzas] = useState<IPizza[]>([]);
   const [shoppingCartItems, setShoppingCartItems] = useState<IPizza[]>([]);
 
   useEffect(() => {
-    setPizzas(dummyPizzas);
     /* TODO: hent pizzaer fra API og legg dem til i pizzas-state */
+    fetchAllPizzas().then((response) => setPizzas(response));
   }, []);
 
   const handleAddToOrder = (pizza: IPizza) => {
@@ -31,6 +33,14 @@ export default function NewOrder() {
   };
 
   const handleCompleteOrder = () => {
+    const items = shoppingCartItems.map((item) => {
+      return item.id;
+    })
+    const body: IPostOrder = {
+      userId: 1,
+      pizzaIds: items,
+    }
+    postOrder(body)
     alert(
       "Completing order! \n\n" +
         shoppingCartItems.map((item) => item.name + "\n").join("")

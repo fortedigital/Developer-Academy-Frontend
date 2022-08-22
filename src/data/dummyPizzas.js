@@ -1,29 +1,26 @@
-const dummyImage =
-  "https://images.unsplash.com/photo-1628840042765-356cda07504e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80";
-
 export const dummyPizzas = [
   {
-    id: "id_marg",
-    name: "Margarita (DUMMY)",
-    price: 140,
-    image: dummyImage,
+    id: 1,
+    name: "Margherita (DUMMY)",
+    price: 99,
+    picture: "dummy.jpg",
   },
   {
-    id: "id_prosc",
+    id: 2,
     name: "Prosciutto (DUMMY)",
-    price: 180,
-    image: dummyImage,
+    price: 124,
+    picture: "dummy.jpg",
   },
   {
-    id: "id_funghi",
+    id: 3,
     name: "Funghi (DUMMY)",
-    price: 160,
-    image: dummyImage,
+    price: 136,
+    picture: "dummy.jpg",
   },
   {
-    id: "id_hawaii",
+    id: 4,
     name: "Hawaii (DUMMY)",
-    price: 175,
-    image: dummyImage,
+    price: 102,
+    picture: "dummy.jpg",
   },
 ];

@@ -10,7 +10,7 @@ type Props = {
 const PizzaCard = ({ pizza, onAddToOrder }: Props) => {
   return (
     <div className="flex h-52 divide-x divide-gray-300 overflow-hidden rounded-md border border-gray-300 bg-white">
-      <div className="flex basis-1/2 flex-col justify-between p-4">
+      <div className="flex flex-none basis-1/2 flex-col justify-between p-4">
         <div className="bg-white">
           <p className="mb-2">{pizza.name}</p>
           <p className="text-lg font-bold">{pizza.price} kr</p>
@@ -23,9 +23,9 @@ const PizzaCard = ({ pizza, onAddToOrder }: Props) => {
           Legg til
         </Button>
       </div>
-      <div
-        className="grow bg-cover"
-        style={{ backgroundImage: `url(${pizza.image})` }}
+      <img
+        src={`/assets/images/${pizza.picture}`}
+        className="basis-1/2 object-cover"
       />
       {/*
       TODO: 
