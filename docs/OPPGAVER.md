@@ -7,13 +7,7 @@
 2. Endre PizzaCard til å også vise prisen på pizzaen
 3. Endre PizzaCard til å også vise bilde av pizzaen
 
-**_Ekstraoppgave_**
-
-Bruk Tailwind CSS for å stilsette PizzaCard til å se slik ut:
-
-![PizzaCard](/docs/assets/pizzacard.jpg)
-
-Relevante Tailwind-klasser: `flex`, `border`, `rounded`
+`
 
 ### Ressurser
 
