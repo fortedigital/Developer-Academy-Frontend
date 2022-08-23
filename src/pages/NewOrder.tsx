@@ -15,29 +15,41 @@ export default function NewOrder() {
   const [pizzas, setPizzas] = useState<IPizza[]>([]);
   const [shoppingCartItems, setShoppingCartItems] = useState<IPizza[]>([]);
 
+  console.log(getCurrentAccount());
   useEffect(() => {
-    /* TODO: hent pizzaer fra API og legg dem til i pizzas-state */
+    // TODO: Modifiser fetchAllPizzas() til å returnere pizzaer fra API istedenfor fra dummy-data
     fetchAllPizzas().then((response) => setPizzas(response));
   }, []);
+
   const handleAddToOrder = (pizza: IPizza) => {
-    setShoppingCartItems((shoppingCartItems) => [...shoppingCartItems, pizza]);
-    /* TODO: legg til valgt pizza i shoppingCartItems-state */
+    // TODO: legg til valgt pizza i shoppingCartItems
+    setShoppingCartItems((currentCartItems) => [...currentCartItems, pizza]);
   };
 
-  const handleRemoveFromOrder = (pizzaIndex: number) => {
-    const updatedItems = shoppingCartItems.filter(
-      (_, index) => index !== pizzaIndex
+  const handleRemoveFromOrder = (itemIndex: number) => {
+    // TODO: fjern valgt pizza fra shoppingCartItems
+    // Tips: funksjonen tar imot en index, så
+    const updatedCartItems = shoppingCartItems.filter(
+      (_, index) => index !== itemIndex
     );
 
-    setShoppingCartItems(updatedItems);
+    setShoppingCartItems(updatedCartItems);
   };
 
   const handleCompleteOrder = () => {
+    if (!getCurrentAccount()) {
+      alert('Logg inn for å fullføre bestilling!');
+      return;
+    }
+    if (!getCurrentAccount()?.idTokenClaims?.oid) {
+      alert('Kunne ikke finne din bruker-id! Prøv igjen senere');
+      return;
+    }
     const items = shoppingCartItems.map((item) => {
       return item.id;
     });
     const body: IPostOrder = {
-      userId: 1,
+      userId: parseInt(getCurrentAccount()?.idTokenClaims?.oid || '0'),
       pizzaIds: items,
     };
     postOrder(body);

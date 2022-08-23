@@ -1,4 +1,4 @@
-import { IPizza } from "./pizza";
+import { IPizza } from './pizza';
 
 export interface IOrder {
   orderId: number;
@@ -7,6 +7,6 @@ export interface IOrder {
 }
 
 export interface IPostOrder {
-  userId: number;
+  userId?: number;
   pizzaIds: number[];
 }
