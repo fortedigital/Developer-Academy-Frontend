@@ -2,7 +2,7 @@
 
 ## Checkpoint 1 - Start
 
-1. List ut dummy-pizzaer på _Bestill_-siden (`pages/NewOrder.tsx`) ved bruk av PizzaCard-komponenten (viser foreløpig kun navnet på pizzaen).
+1. List ut dummy-pizzaer på _Bestill_-siden (`pages/NewOrder.tsx`) ved bruk av PizzaCard-komponenten (denne viser foreløpig kun navnet på pizzaen).
    - `pizzas`-staten inneholder et array med objekter av typen `IPizza` - disse må mappes ut Array.map()
 2. Endre PizzaCard til å også vise prisen på pizzaen (bruk `<p>`). Fremhev prisen ved å gi den klassene:
    - `text-lg` - øker font-størrelsen til 18px
