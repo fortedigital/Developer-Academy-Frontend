@@ -69,7 +69,7 @@ _Bestill_-siden skal nå vise de nye pizzaene fra APIet.
 - [Using Fetch - Uploading JSON data](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch#uploading_json_data)
 - [Window.alert()](https://developer.mozilla.org/en-US/docs/Web/API/Window/alert)
 
-## Checkpoint 5 - Vis bestillinger på mine bestillinger siden
+## Checkpoint 5 - Vis liste over alle bestillinger
 
 1. List ut dummy-bestillinger på _Mine bestillinger_-siden (`pages/MyOrders.tsx`) ved bruk av OrderItem-komponenten
    - `orders`-staten inneholder et array med objekter av typen `IOrder` - disse må mappes ut med Array.map()
@@ -83,7 +83,7 @@ Bestillingene fra APIet skal nå vises på _Mine bestillinger_-siden.
 
 - [Template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
 
-## Checkpoint 6 - Vis detaljer om bestillinger
+## Checkpoint 6 - Vis detaljer om en bestilling
 
 1. Legg til en knapp i OrderItem-komponenten med teksten "Se detaljer" og en onClick som kaller på `onCheckDetails()`.
 
