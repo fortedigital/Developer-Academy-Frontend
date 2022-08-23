@@ -39,8 +39,8 @@ _Bestill_-siden skal nå vise de nye pizzaene fra APIet.
 
 2. I `NewOrder.tsx`, modifiser `handleAddToOrder()` så den oppdaterer `shoppingCartItems` med valgt pizza.
    - Pizzaer du har valgt skal nå automatisk vises i handlekurven
-3. Items'ene i handlekurven har en Fjern-knapp som allerede er koblet opp mot `handleRemoveFromOrder()`. Implementer logikken for fjerning av en item fra `shoppingCartItems`.
-   - Tips: Funksjonen tar imot en itemIndex. Ved hjelp av `Array.filter()` kan man lage en filtrert kopi av `shoppingCartItems`, slik at den inneholder alle tidligere items minus den som skal fjernes.
+3. Items'ene i handlekurven har en Fjern-knapp som allerede er koblet opp mot `handleRemoveFromOrder()`. Ferdigstill denne funksjonen slik at man kan fjerne en item fra `shoppingCartItems`.
+   - Tips: Funksjonen tar imot `itemIndex` som parameter. Ved hjelp av `Array.filter()` kan man lage en filtrert kopi av `shoppingCartItems`, slik at den inneholder alle tidligere items som har en index som ikke er lik `itemIndex`.
 
 ### Ressurser
 
