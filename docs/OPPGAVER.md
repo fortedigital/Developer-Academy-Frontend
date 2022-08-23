@@ -2,12 +2,12 @@
 
 ## Checkpoint 1 - Start
 
-1. List ut dummy-pizzaer på _Bestill_-siden (`pages/NewOrder.tsx`) ved bruk av PizzaCard-komponenten (viser foreløpig kun navnet på pizzaen).
-   - `pizzas`-staten inneholder et array med objekter av typen `IPizza` - disse må mappes ut Array.map()
-2. Endre PizzaCard til å også vise prisen på pizzaen (bruk `<p>`). Fremhev prisen ved å gi den klassene:
+1. List ut dummy-pizzaer på _Bestill_-siden (`pages/NewOrder.tsx`) ved bruk av PizzaCard-komponenten (denne viser foreløpig kun navnet på pizzaen).
+   - `pizzas`-staten inneholder et array med objekter av typen `IPizza` - disse må mappes ut med Array.map()
+2. Endre PizzaCard til å også vise prisen på pizzaen (bruk en `<p>`-tag). Fremhev prisen ved å sette følgende klasser i `className`:
    - `text-lg` - øker font-størrelsen til 18px
    - `font-bold` - gjør teksten fet
-3. Endre PizzaCard til å også vise bilde av pizzaen (bruk `<img>`). Gi bildet følgende klasser:
+3. Endre PizzaCard til å også vise bilde av pizzaen (bruk en `<img>`-tag). Sett følgende klasser i `className`:
    - `basis-1/2` - gjør at bildet fyller opp halve kortet
    - `object-cover` - gjør at bildet dekker hele containeren uten å miste aspect ratio
 
@@ -52,7 +52,7 @@ _Bestill_-siden skal nå vise de nye pizzaene fra APIet.
 
 1. Modifiser `postOrder()`-funksjonen i `api/postOrder.ts` slik at den kan poste en bestilling til APIet ved hjelp av en `fetch()` call
    - Endepunktet som skal tas i bruk er `https://kjetilpizzaapi.azurewebsites.net/api/orders`
-2. "Bestill"-knappen nederst i handlekurven kaller på `handleOrderComplete()`. Legg til følgende logikk i denne funksjonen:
+2. "Bestill"-knappen nederst i handlekurven kaller på `handleCompleteOrder()`. Legg til følgende logikk i denne funksjonen:
 
    - Generer et body-objekt av typen `IPostOrder`. Dette objektet forventer to properties: `userId` og `pizzaIds`
      - Sett `userId` til **1**. Vanligvis hadde man hentet dette fra innlogget session, men her hardkoder vi en bruker-ID isteden.
@@ -72,7 +72,7 @@ _Bestill_-siden skal nå vise de nye pizzaene fra APIet.
 ## Checkpoint 5 - Vis bestillinger på mine bestillinger siden
 
 1. List ut dummy-bestillinger på _Mine bestillinger_-siden (`pages/MyOrders.tsx`) ved bruk av OrderItem-komponenten
-   - `orders`-staten inneholder et array med objekter av typen `IOrder` - disse må mappes ut Array.map()
+   - `orders`-staten inneholder et array med objekter av typen `IOrder` - disse må mappes ut med Array.map()
 2. `fetchUserOrders()` returnerer per nå kun dummydata. Modifiser funksjonen til å ta i bruk `fetch()` for å hente data fra APIet og returner dette istedet.
    - Endepunktet som skal tas i bruk er `https://kjetilpizzaapi.azurewebsites.net/api/orders/BRUKER_ID` (_BRUKER_ID_ er en placeholder)
    - Funksjonen tar imot parameteret `userId`. Kombiner `userId` med endepunktsadressen ved hjelp av f.eks. en template literal (bytt ut _BRUKER_ID_-placeholderen).
