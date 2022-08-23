@@ -5,9 +5,7 @@ import OrderItem from '../components/OrderItem';
 import OrderDetails from '../components/OrderDetails';
 
 import { IOrder } from '../interfaces/order';
-import { dummyOrders } from '../data/dummyOrders';
 import { fetchUserOrders } from '../api/fetchUserOrders';
-import { getCurrentAccount } from '../auth/authPopup';
 
 export default function MyOrders() {
   const [orders, setOrders] = useState<IOrder[]>([]);
@@ -15,9 +13,7 @@ export default function MyOrders() {
 
   useEffect(() => {
     //setOrders(dummyOrders as IOrder[]);
-    fetchUserOrders(
-      parseInt(getCurrentAccount()?.idTokenClaims?.oid || '0')
-    ).then((response) => setOrders(response));
+    fetchUserOrders(1).then((response) => setOrders(response));
     /* TODO: hent bestillinger fra API og legg dem til i orders-state */
   }, []);
 

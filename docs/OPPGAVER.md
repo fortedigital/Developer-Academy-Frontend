@@ -23,6 +23,7 @@ Relevante Tailwind-klasser: `flex`, `border`, `rounded`
 ## Checkpoint 2 - Hent pizzaer fra API
 
 1. `fetchAllPizzas()` returnerer per nå kun dummydata. Modifiser funksjonen til å ta i bruk `fetch()` for å hente data fra APIet og returner dette istedet.
+   - Endepunktet som skal tas i bruk er `https://kjetilpizzaapi.azurewebsites.net/api/pizza`
 
 ### Ressurser
 
@@ -49,11 +50,10 @@ Relevante Tailwind-klasser: `flex`, `border`, `rounded`
 
 ## Checkpoint 4 - Post bestilling til API
 
-1. Legg til et `fetch()` call som poster JSON-data til APIet i [postOrder.ts](../src/api/postOrder.ts)
-2. Legg til logikk i `handleOrderComplete()` som kaller `postOrder()`
-   - Sjekk at brukeren er logget inn ved å sjekke at `getCurrentAccount()` eksisterer.
-   - Bruk en parseInt på `getCurrentAccount()?.tokenClaimIds?.oid` for å omgjøre det til ett tall som kan sendes til APIet.
-   - Send med IDen til brukeren ved å bruke tallet ovenifra.
+1. Legg til et `fetch()` call som poster JSON-data til APIet i `api/postOrder.ts`
+   - Endepunktet som skal tas i bruk er `https://kjetilpizzaapi.azurewebsites.net/api/orders`
+2. "Bestill"-knappen nederst i handlekurven kaller på `handleOrderComplete()`. Legg til logikk i denne funksjonen som kaller `postOrder()`
+   - IDen til brukeren deres er 1.
    - APIet tar bare i mot pizzaIds, så map ut IDene til pizzaene i handlekurven.
 
 ### Ressurser
@@ -62,7 +62,7 @@ Relevante Tailwind-klasser: `flex`, `border`, `rounded`
 
 ## Checkpoint 5 - Vis bestillinger på mine bestillinger siden
 
-1. Ta i bruk `fetchUserOrders` for å mappe ut bestillingene som OrderCards.
+1. Ta i bruk `fetchUserOrders` for å mappe ut bestillingene som OrderItem.
 2. `fetchUserOrders()` returnerer dummy data, hent ut bestillingene til brukeren ved å fetche APIet med IDen du brukte for å poste dem tidligere.
    - Endepunktet du må fetche fra har ID-en i seg, bruk en template literal for å legge til ID-en i fetchen
 

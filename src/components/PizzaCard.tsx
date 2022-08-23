@@ -1,6 +1,6 @@
-import React from "react";
-import { IPizza } from "../interfaces/pizza";
-import Button from "./Button";
+import React from 'react';
+import { IPizza } from '../interfaces/pizza';
+import Button from './Button';
 
 type Props = {
   pizza: IPizza;
@@ -26,6 +26,7 @@ const PizzaCard = ({ pizza, onAddToOrder }: Props) => {
       <img
         src={`/assets/images/${pizza.picture}`}
         className="basis-1/2 object-cover"
+        alt={pizza.name}
       />
       {/*
       TODO: 
