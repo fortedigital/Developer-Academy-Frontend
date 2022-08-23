@@ -14,9 +14,10 @@ Kommandoen for dette er `git checkout checkpoint-X`, der X er tallet på checkpo
 
 ## Oppsett
 
-1. Last ned repoet
+1. Last ned repoet og gå inn i prosjektmappen
    ```
    git clone https://github.com/fortedigital/Developer-Academy-Frontend.git
+   cd Developer-Academy-Frontend
    ```
 2. Installer dependencies
 
