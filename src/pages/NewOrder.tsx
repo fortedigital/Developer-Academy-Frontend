@@ -34,26 +34,13 @@ export default function NewOrder() {
   };
 
   const handleCompleteOrder = () => {
-    // TODO: Generer body-objekt av typen IPostOrder og send dette til postOrder()
-    // Sett userId til 1
-    // Sett pizzaIds til å være et array av alle IDene fra shoppingCartItems
-    const pizzaIds = shoppingCartItems.map((item) => {
-      return item.id;
-    });
-    const body: IPostOrder = {
-      userId: 1,
-      pizzaIds: pizzaIds,
-    };
-    postOrder(body);
-
+    /* TODO: Generer body-objekt av typen IPostOrder og send dette til postOrder()
+     - Sett userId til 1
+     - Sett pizzaIds til å være et array av alle IDene fra shoppingCartItems */
+     
     // Tøm handlekurv etter gjennomført bestilling
-    setShoppingCartItems([]);
-
+    
     // Ekstraoppgave: vis alert som sier at bestilling er gjennomført
-    alert(
-      "Bestilling er fullført! \n\n" +
-        shoppingCartItems.map((item) => item.name + "\n").join("")
-    );
   };
 
   return (
