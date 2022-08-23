@@ -36,3 +36,6 @@ Installer følgende extensions i VS Code:
 - Tailwind CSS IntelliSense
 - Prettier - Code formatter
 
+## Oppgaver
+
+Oppgavene ligger under [`docs/OPPGAVER.md`](docs/OPPGAVER.md)

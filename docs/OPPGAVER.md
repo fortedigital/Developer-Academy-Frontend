@@ -10,6 +10,7 @@
 ### Ekstraoppgave
 
 Bruk Tailwind CSS for å stilsette PizzaCard til å se slik ut:
+
 ![](/docs/assets/pizzacard.jpg)
 
 Relevante Tailwind-klasser: `flex`, `border`, `rounded`
