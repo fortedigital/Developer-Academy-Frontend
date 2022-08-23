@@ -7,7 +7,6 @@
 2. Endre PizzaCard til å også vise prisen på pizzaen
 3. Endre PizzaCard til å også vise bilde av pizzaen
 
-`
 
 ### Ressurser
 
