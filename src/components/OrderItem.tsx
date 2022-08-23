@@ -28,9 +28,6 @@ export default function OrderItem({
       <Field label="Ordernr." value={order.orderId.toString()} />
       <Field label="Pris" value={`${order.price} kr`} />
       <Field label="Antall pizzaer" value={`${order.pizza.length} stk.`} />
-      <Button onClick={() => onCheckDetails()} variant="ghost" size="small">
-        Se detaljer
-      </Button>
       {/* TODO: Legg til "Se detaljer"-knapp med Button-komponent */}
     </div>
   );

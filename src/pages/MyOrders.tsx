@@ -25,13 +25,12 @@ export default function MyOrders() {
           {orders.map((order, index) => (
             <OrderItem
               order={order}
-              onCheckDetails={() => setSelectedOrder(order)}
+              onCheckDetails={() => {}} // TODO: endre selectedOrder
               key={index}
             />
           ))}
           {/*TODO: list ut alle bestillingene i orders-state som OrderItem*/}
         </div>
-        {selectedOrder && <OrderDetails order={selectedOrder} />}
         {/* TODO: Vis OrderDetails dersom selectedOrder ikke er undefined */}
       </div>
     </div>
