@@ -3,7 +3,7 @@
 ## Checkpoint 1 - Start
 
 1. List ut dummy-pizzaer på _Bestill_-siden (`pages/NewOrder.tsx`) ved bruk av PizzaCard-komponenten (denne viser foreløpig kun navnet på pizzaen).
-   - `pizzas`-staten inneholder et array med objekter av typen `IPizza` - disse må mappes ut Array.map()
+   - `pizzas`-staten inneholder et array med objekter av typen `IPizza` - disse må mappes ut med Array.map()
 2. Endre PizzaCard til å også vise prisen på pizzaen (bruk `<p>`). Fremhev prisen ved å gi den klassene:
    - `text-lg` - øker font-størrelsen til 18px
    - `font-bold` - gjør teksten fet
@@ -72,7 +72,7 @@ _Bestill_-siden skal nå vise de nye pizzaene fra APIet.
 ## Checkpoint 5 - Vis bestillinger på mine bestillinger siden
 
 1. List ut dummy-bestillinger på _Mine bestillinger_-siden (`pages/MyOrders.tsx`) ved bruk av OrderItem-komponenten
-   - `orders`-staten inneholder et array med objekter av typen `IOrder` - disse må mappes ut Array.map()
+   - `orders`-staten inneholder et array med objekter av typen `IOrder` - disse må mappes ut med Array.map()
 2. `fetchUserOrders()` returnerer per nå kun dummydata. Modifiser funksjonen til å ta i bruk `fetch()` for å hente data fra APIet og returner dette istedet.
    - Endepunktet som skal tas i bruk er `https://kjetilpizzaapi.azurewebsites.net/api/orders/BRUKER_ID` (_BRUKER_ID_ er en placeholder)
    - Funksjonen tar imot parameteret `userId`. Kombiner `userId` med endepunktsadressen ved hjelp av f.eks. en template literal (bytt ut _BRUKER_ID_-placeholderen).
