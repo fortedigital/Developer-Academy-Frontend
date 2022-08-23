@@ -4,10 +4,10 @@
 
 1. List ut dummy-pizzaer på _Bestill_-siden (`pages/NewOrder.tsx`) ved bruk av PizzaCard-komponenten (denne viser foreløpig kun navnet på pizzaen).
    - `pizzas`-staten inneholder et array med objekter av typen `IPizza` - disse må mappes ut med Array.map()
-2. Endre PizzaCard til å også vise prisen på pizzaen (bruk `<p>`). Fremhev prisen ved å gi den klassene:
+2. Endre PizzaCard til å også vise prisen på pizzaen (bruk en `<p>`-tag). Fremhev prisen ved å sette følgende klasser i className:
    - `text-lg` - øker font-størrelsen til 18px
    - `font-bold` - gjør teksten fet
-3. Endre PizzaCard til å også vise bilde av pizzaen (bruk `<img>`). Gi bildet følgende klasser:
+3. Endre PizzaCard til å også vise bilde av pizzaen (bruk en `<img>`-tag). Sett følgende klasser i className:
    - `basis-1/2` - gjør at bildet fyller opp halve kortet
    - `object-cover` - gjør at bildet dekker hele containeren uten å miste aspect ratio
 
