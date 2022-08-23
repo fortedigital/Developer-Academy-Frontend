@@ -1,13 +1,13 @@
-import React from 'react';
-import { IPizza } from '../interfaces/pizza';
-import Button from './Button';
+import React from "react";
+import { IPizza } from "../interfaces/pizza";
+import Button from "./Button";
 
 type Props = {
   pizza: IPizza;
-  onAddToOrder: (pizza: IPizza) => void;
+  onAddToOrder?: (pizza: IPizza) => void;
 };
 
-const PizzaCard = ({ pizza, onAddToOrder }: Props) => {
+const PizzaCard = ({ pizza, onAddToOrder = () => {} }: Props) => {
   return (
     <div className="flex h-52 divide-x divide-gray-300 overflow-hidden rounded-md border border-gray-300 bg-white">
       <div className="flex flex-none basis-1/2 flex-col justify-between p-4">

@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { isAuthenticated, signIn, signOut } from '../auth/authPopup';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { isAuthenticated, signIn, signOut } from "../auth/authPopup";
 
-import Button from './Button';
+import Button from "./Button";
 
 export default function Header() {
   const [auth, setAuth] = useState(false);
@@ -10,9 +10,9 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-10 bg-stone-700">
       <div className="mx-auto flex h-16 max-w-screen-2xl items-center gap-x-6 px-6 text-white">
-        <h1 className="mr-auto text-center text-2xl font-bold">
+        <Link to="/" className="mr-auto text-center text-2xl font-bold">
           Pizzeria Forte
-        </h1>
+        </Link>
         <div className="flex items-center gap-x-6">
           <Link className="underline-offset-4 hover:underline" to="/">
             Bestill

@@ -1,19 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
-import Heading from '../components/Heading';
-import OrderItem from '../components/OrderItem';
-import OrderDetails from '../components/OrderDetails';
+import Heading from "../components/Heading";
+import OrderItem from "../components/OrderItem";
+import OrderDetails from "../components/OrderDetails";
 
-import { IOrder } from '../interfaces/order';
-import { fetchUserOrders } from '../api/fetchUserOrders';
+import { IOrder } from "../interfaces/order";
+import { fetchUserOrders } from "../api/fetchUserOrders";
 
 export default function MyOrders() {
   const [orders, setOrders] = useState<IOrder[]>([]);
   const [selectedOrder, setSelectedOrder] = useState<IOrder | undefined>();
 
   useEffect(() => {
-    //setOrders(dummyOrders as IOrder[]);
-    fetchUserOrders(1).then((response) => setOrders(response));
+    const userId = 1; // hardkodet bruker-ID
+    fetchUserOrders(userId).then((response) => setOrders(response));
     /* TODO: hent bestillinger fra API og legg dem til i orders-state */
   }, []);
 
@@ -32,6 +32,7 @@ export default function MyOrders() {
           {/*TODO: list ut alle bestillingene i orders-state som OrderItem*/}
         </div>
         {selectedOrder && <OrderDetails order={selectedOrder} />}
+        {/* TODO: Vis OrderDetails dersom selectedOrder ikke er undefined */}
       </div>
     </div>
   );

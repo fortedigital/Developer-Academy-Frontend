@@ -34,12 +34,12 @@ export default function NewOrder() {
   };
 
   const handleCompleteOrder = () => {
-    const items = shoppingCartItems.map((item) => {
+    const pizzaIds = shoppingCartItems.map((item) => {
       return item.id;
     });
     const body: IPostOrder = {
       userId: 1,
-      pizzaIds: items,
+      pizzaIds: pizzaIds,
     };
     postOrder(body);
     alert(
