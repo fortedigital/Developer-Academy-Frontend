@@ -5,8 +5,6 @@ import { isAuthenticated, signIn, signOut } from "../auth/authPopup";
 import Button from "./Button";
 
 export default function Header() {
-  console.log("Is auth: ", isAuthenticated());
-
   return (
     <header className="sticky top-0 z-10 bg-stone-700">
       <div className="mx-auto flex h-16 max-w-screen-2xl items-center gap-x-6 px-6 text-white">
