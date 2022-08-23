@@ -12,6 +12,7 @@
 
 - [How to use Array.map() to render data in React](https://linguinecode.com/post/how-to-use-map-react)
 - [Tailwind CSS docs](https://tailwindcss.com/)
+- [Typescript Interfaces](https://www.typescriptlang.org/docs/handbook/interfaces.html)
 
 ## Checkpoint 2 - Hent pizzaer fra API
 
