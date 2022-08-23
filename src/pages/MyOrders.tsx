@@ -13,7 +13,7 @@ export default function MyOrders() {
   const [selectedOrder, setSelectedOrder] = useState<IOrder | undefined>();
 
   useEffect(() => {
-    setOrders(dummyOrders as IOrder[]);
+    //setOrders(dummyOrders as IOrder[]);
     fetchUserOrders(1).then((response) => setOrders(response));
     /* TODO: hent bestillinger fra API og legg dem til i orders-state */
   }, []);

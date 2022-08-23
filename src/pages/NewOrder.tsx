@@ -1,14 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
-import Heading from "../components/Heading";
-import PizzaCard from "../components/PizzaCard";
-import ShoppingCart from "../components/ShoppingCart";
+import Heading from '../components/Heading';
+import PizzaCard from '../components/PizzaCard';
+import ShoppingCart from '../components/ShoppingCart';
 
-import { IPizza } from "../interfaces/pizza";
-import { IPostOrder } from "../interfaces/order";
-import { fetchAllPizzas } from "../api/fetchAllPizzas";
-import { dummyPizzas } from "../data/dummyPizzas";
-import { postOrder} from "../api/postOrder";
+import { IPizza } from '../interfaces/pizza';
+import { IPostOrder } from '../interfaces/order';
+import { fetchAllPizzas } from '../api/fetchAllPizzas';
+import { dummyPizzas } from '../data/dummyPizzas';
+import { postOrder } from '../api/postOrder';
+import { getCurrentAccount } from '../auth/authPopup';
 
 export default function NewOrder() {
   const [pizzas, setPizzas] = useState<IPizza[]>([]);
@@ -18,7 +19,6 @@ export default function NewOrder() {
     /* TODO: hent pizzaer fra API og legg dem til i pizzas-state */
     fetchAllPizzas().then((response) => setPizzas(response));
   }, []);
-
   const handleAddToOrder = (pizza: IPizza) => {
     setShoppingCartItems((shoppingCartItems) => [...shoppingCartItems, pizza]);
     /* TODO: legg til valgt pizza i shoppingCartItems-state */
@@ -35,15 +35,15 @@ export default function NewOrder() {
   const handleCompleteOrder = () => {
     const items = shoppingCartItems.map((item) => {
       return item.id;
-    })
+    });
     const body: IPostOrder = {
       userId: 1,
       pizzaIds: items,
-    }
-    postOrder(body)
+    };
+    postOrder(body);
     alert(
-      "Completing order! \n\n" +
-        shoppingCartItems.map((item) => item.name + "\n").join("")
+      'Completing order! \n\n' +
+        shoppingCartItems.map((item) => item.name + '\n').join('')
     );
 
     setShoppingCartItems([]);
