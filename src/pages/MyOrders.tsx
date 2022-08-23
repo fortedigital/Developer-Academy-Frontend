@@ -22,13 +22,6 @@ export default function MyOrders() {
       <Heading>Mine bestillinger</Heading>
       <div className="flex gap-x-6 overflow-y-auto">
         <div className="flex flex-col divide-y divide-stone-400 overflow-y-auto pr-6">
-          {orders.map((order, index) => (
-            <OrderItem
-              order={order}
-              onCheckDetails={() => {}} // TODO: endre selectedOrder
-              key={index}
-            />
-          ))}
           {/*TODO: list ut alle bestillingene i orders-state som OrderItem*/}
         </div>
         {/* TODO: Vis OrderDetails dersom selectedOrder ikke er undefined */}
