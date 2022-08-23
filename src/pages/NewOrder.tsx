@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
-import Heading from '../components/Heading';
-import PizzaCard from '../components/PizzaCard';
-import ShoppingCart from '../components/ShoppingCart';
+import Heading from "../components/Heading";
+import PizzaCard from "../components/PizzaCard";
+import ShoppingCart from "../components/ShoppingCart";
 
-import { IPizza } from '../interfaces/pizza';
-import { IPostOrder } from '../interfaces/order';
-import { fetchAllPizzas } from '../api/fetchAllPizzas';
-import { dummyPizzas } from '../data/dummyPizzas';
-import { postOrder } from '../api/postOrder';
+import { IPizza } from "../interfaces/pizza";
+import { IPostOrder } from "../interfaces/order";
+import { fetchAllPizzas } from "../api/fetchAllPizzas";
+import { dummyPizzas } from "../data/dummyPizzas";
+import { postOrder } from "../api/postOrder";
 
 export default function NewOrder() {
   const [pizzas, setPizzas] = useState<IPizza[]>([]);
@@ -34,6 +34,9 @@ export default function NewOrder() {
   };
 
   const handleCompleteOrder = () => {
+    // TODO: Generer body-objekt av typen IPostOrder og send dette til postOrder()
+    // Sett userId til 1
+    // Sett pizzaIds til å være et array av alle IDene fra shoppingCartItems
     const pizzaIds = shoppingCartItems.map((item) => {
       return item.id;
     });
@@ -42,12 +45,15 @@ export default function NewOrder() {
       pizzaIds: pizzaIds,
     };
     postOrder(body);
-    alert(
-      'Completing order! \n\n' +
-        shoppingCartItems.map((item) => item.name + '\n').join('')
-    );
 
+    // Tøm handlekurv etter gjennomført bestilling
     setShoppingCartItems([]);
+
+    // Ekstraoppgave: vis alert som sier at bestilling er gjennomført
+    alert(
+      "Bestilling er fullført! \n\n" +
+        shoppingCartItems.map((item) => item.name + "\n").join("")
+    );
   };
 
   return (
@@ -56,7 +62,7 @@ export default function NewOrder() {
         <Heading>Bestill</Heading>
         <div className="grid grid-cols-2 gap-4">
           {/*
-            TODO: list ut alle pizzaene i pizzas-state som PizzaCard
+            TODO: list ut alle pizzaene i pizzas-state ved bruk av PizzaCard-komponent
             Tips: bruk Array.map()
           */}
           {pizzas.map((pizza, index) => (

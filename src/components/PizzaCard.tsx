@@ -14,6 +14,7 @@ const PizzaCard = ({ pizza, onAddToOrder = () => {} }: Props) => {
         <div className="bg-white">
           <p className="mb-2">{pizza.name}</p>
           <p className="text-lg font-bold">{pizza.price} kr</p>
+          {/* TODO: vis pizza-pris, bruk klassene "text-lg font-bold" */}
         </div>
         <Button
           onClick={() => onAddToOrder(pizza)}
@@ -22,18 +23,14 @@ const PizzaCard = ({ pizza, onAddToOrder = () => {} }: Props) => {
         >
           Legg til
         </Button>
+        {/* TODO: implementer "Legg til"-knapp med Button-komponent */}
       </div>
       <img
         src={`/assets/images/${pizza.picture}`}
         className="basis-1/2 object-cover"
         alt={pizza.name}
       />
-      {/*
-      TODO: 
-      - Vis pizza-pris
-      - Vis pizza-bilde
-      - Implementer "Legg til"-knapp med Button-komponent
-      */}
+      {/* TODO: vis pizza-bilde, bruk klassene "basis-1/2 object-cover" */}
     </div>
   );
 };
