@@ -1,7 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { signIn } from '../auth/authPopup';
 
-import Button from "./Button";
+import Button from './Button';
 
 export default function Header() {
   return (
@@ -21,7 +22,9 @@ export default function Header() {
             Mine Bestillinger
           </Link>
           {/*TODO: Auth */}
-          <Button variant="secondary">Logg inn</Button>
+          <Button variant="secondary" onClick={() => signIn()}>
+            Logg inn
+          </Button>
         </div>
       </div>
     </header>
