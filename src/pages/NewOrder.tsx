@@ -29,12 +29,10 @@ export default function NewOrder() {
 
   const handleCompleteOrder = () => {
     /* TODO: Generer body-objekt av typen IPostOrder og send dette til postOrder()
-     - Sett userId til 1
-     - Sett pizzaIds til å være et array av alle IDene fra shoppingCartItems */
-     
-    // Tøm handlekurv etter gjennomført bestilling
-
-    // Ekstraoppgave: vis alert som sier at bestilling er gjennomført
+       - Sett userId til 1
+       - Sett pizzaIds til å være et array av alle IDene fra shoppingCartItems */
+    // TODO: Tøm handlekurv etter gjennomført bestilling
+    // TODO: Ekstraoppgave: vis alert som sier at bestilling er gjennomført
   };
 
   return (
@@ -46,13 +44,6 @@ export default function NewOrder() {
             TODO: list ut alle pizzaene i pizzas-state ved bruk av PizzaCard-komponent
             Tips: bruk Array.map()
           */}
-          {pizzas.map((pizza, index) => (
-            <PizzaCard
-              pizza={pizza}
-              onAddToOrder={handleAddToOrder}
-              key={index}
-            />
-          ))}
         </div>
       </div>
       <ShoppingCart

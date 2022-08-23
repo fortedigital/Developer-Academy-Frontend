@@ -13,16 +13,10 @@ const PizzaCard = ({ pizza, onAddToOrder = () => {} }: Props) => {
       <div className="flex flex-none basis-1/2 flex-col justify-between p-4">
         <div className="bg-white">
           <p className="mb-2">{pizza.name}</p>
-          <p className="text-lg font-bold">{pizza.price} kr</p>
           {/* TODO: vis pizza-pris, bruk klassene "text-lg font-bold" */}
         </div>
         {/* TODO: implementer "Legg til"-knapp med Button-komponent */}
       </div>
-      <img
-        src={`/assets/images/${pizza.picture}`}
-        className="basis-1/2 object-cover"
-        alt={pizza.name}
-      />
       {/* TODO: vis pizza-bilde, bruk klassene "basis-1/2 object-cover" */}
     </div>
   );
