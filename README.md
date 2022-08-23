@@ -10,7 +10,7 @@ Velkommen til frontend-programmet i Forte Developer Academy! Her vil dere lære 
 
 Programmet er delt opp i checkpoints, der hver checkpoint har et sett med tilhørende oppgaver. Alle checkpointene har en branch knyttet til seg - dersom man faller av underveis kan man enkelt komme seg tilbake på sporet ved å bytte til branchen man ønsker å fortsette fra.
 
-Kommandoen for dette er `git checkout checkpoint-X`, der X er tallet på checkpointen dere vil bytte til.
+Kommandoen for dette er `git checkout checkpoint-X`, der X er tallet på checkpointen man vil bytte til.
 
 ## Oppsett
 
