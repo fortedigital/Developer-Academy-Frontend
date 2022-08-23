@@ -1,11 +1,11 @@
-import React from "react";
-import { IPizza } from "../interfaces/pizza";
-import Button from "./Button";
+import React from 'react';
+import { IPizza } from '../interfaces/pizza';
+import Button from './Button';
 
 type ShoppingCartProps = {
   items: IPizza[];
   onCompleteOrder: () => void;
-  onRemoveFromOrder: (pizzaIndex: number) => void;
+  onRemoveFromOrder: (itemIndex: number) => void;
 };
 
 type ShoppingCartItemProps = {
