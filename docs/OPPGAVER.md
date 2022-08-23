@@ -76,3 +76,5 @@ Relevante Tailwind-klasser: `flex`, `border`, `rounded`
 2. Vis OrderDetails når `selectedOrder`-staten i MyOrders inneholder en gyldig ordre. Send med `selectedOrder` til OrderDetails som proppen `order`.
 
 ### Ressurser
+
+- [Conditional Rendering in React](https://reactjs.org/docs/conditional-rendering.html#inline-if-with-logical--operator)
