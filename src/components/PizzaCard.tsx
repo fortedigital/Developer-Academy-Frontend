@@ -16,13 +16,6 @@ const PizzaCard = ({ pizza, onAddToOrder = () => {} }: Props) => {
           <p className="text-lg font-bold">{pizza.price} kr</p>
           {/* TODO: vis pizza-pris, bruk klassene "text-lg font-bold" */}
         </div>
-        <Button
-          onClick={() => onAddToOrder(pizza)}
-          variant="outlined"
-          size="small"
-        >
-          Legg til
-        </Button>
         {/* TODO: implementer "Legg til"-knapp med Button-komponent */}
       </div>
       <img

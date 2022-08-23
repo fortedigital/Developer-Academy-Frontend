@@ -21,16 +21,10 @@ export default function NewOrder() {
 
   const handleAddToOrder = (pizza: IPizza) => {
     // TODO: legg til valgt pizza i shoppingCartItems
-    setShoppingCartItems((currentCartItems) => [...currentCartItems, pizza]);
   };
 
   const handleRemoveFromOrder = (itemIndex: number) => {
     // TODO: fjern valgt pizza fra shoppingCartItems
-    const updatedCartItems = shoppingCartItems.filter(
-      (_, index) => index !== itemIndex
-    );
-
-    setShoppingCartItems(updatedCartItems);
   };
 
   const handleCompleteOrder = () => {
@@ -39,7 +33,7 @@ export default function NewOrder() {
      - Sett pizzaIds til å være et array av alle IDene fra shoppingCartItems */
      
     // Tøm handlekurv etter gjennomført bestilling
-    
+
     // Ekstraoppgave: vis alert som sier at bestilling er gjennomført
   };
 
