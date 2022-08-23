@@ -34,12 +34,12 @@ Relevante Tailwind-klasser: `flex`, `border`, `rounded`
 
    - Her kan du bruke `Button`-komponenten. Denne har to props som kan brukes til styling: `variant` og `size`.
    - Eksempel:
-
-   ![PizzaCard med knapp](/docs/assets/pizzacard-with-button.jpg)
+  
+     ![PizzaCard med knapp](/docs/assets/pizzacard-with-button.jpg)
 
 2. I `NewOrder.tsx`, modifiser `handleAddToOrder()` så den oppdaterer shoppingCartItems med valgt pizza.
    - Den valgte pizzaen skal da vises i handlekurven.
-3. Items'ene i handlekurven har en Fjern-knapp som allerede er koblet opp mot `handleRemoveFromOrder()`. Modifiser denne funksjonen så en valgt item faktisk blir fjernet fra shoppingCartItems.
+3. Items'ene i handlekurven har en Fjern-knapp som allerede er koblet opp mot `handleRemoveFromOrder()`. Modifiser denne funksjonen så en item faktisk blir fjernet fra shoppingCartItems.
    - Funksjonen tar imot indexen til itemen som skal fjernes. Ved hjelp av `Array.filter()` kan man lage en filtrert kopi av shoppingCartItems, slik at den inneholder alle tidligere items minus den som skal fjernes.
 
 ### Ressurser

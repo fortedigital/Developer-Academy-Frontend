@@ -1,6 +1,6 @@
-import React from 'react';
-import { IPizza } from '../interfaces/pizza';
-import Button from './Button';
+import React from "react";
+import { IPizza } from "../interfaces/pizza";
+import Button from "./Button";
 
 type ShoppingCartProps = {
   items: IPizza[];
@@ -42,7 +42,7 @@ export default function ShoppingCart({
 
   return (
     <div
-      className="flex w-72 flex-col border-l border-stone-500 lg:w-96"
+      className="flex w-72 flex-none flex-col border-l border-stone-500 lg:w-96"
       id="shopping-cart"
     >
       <div className="grow overflow-auto p-6">
