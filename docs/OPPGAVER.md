@@ -41,6 +41,7 @@
 
 - [Push an element into a state Array in React](https://bobbyhadz.com/blog/react-push-to-state-array)
 - [Filter array of objects by index](https://stackoverflow.com/a/55141059)
+- [Using the State Hook - React](https://reactjs.org/docs/hooks-state.html)
 
 ## Checkpoint 4 - Post bestilling til API
 
