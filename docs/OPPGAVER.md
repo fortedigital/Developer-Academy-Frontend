@@ -52,7 +52,7 @@ _Bestill_-siden skal nå vise de nye pizzaene fra APIet.
 
 1. Modifiser `postOrder()`-funksjonen i `api/postOrder.ts` slik at den kan poste en bestilling til APIet ved hjelp av en `fetch()` call
    - Endepunktet som skal tas i bruk er `https://kjetilpizzaapi.azurewebsites.net/api/orders`
-2. "Bestill"-knappen nederst i handlekurven kaller på `handleOrderComplete()`. Legg til følgende logikk i denne funksjonen:
+2. "Bestill"-knappen nederst i handlekurven kaller på `handleCompleteOrder()`. Legg til følgende logikk i denne funksjonen:
 
    - Generer et body-objekt av typen `IPostOrder`. Dette objektet forventer to properties: `userId` og `pizzaIds`
      - Sett `userId` til **1**. Vanligvis hadde man hentet dette fra innlogget session, men her hardkoder vi en bruker-ID isteden.
