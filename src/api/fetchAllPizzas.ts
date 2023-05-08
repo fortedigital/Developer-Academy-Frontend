@@ -1,7 +1,7 @@
-import { IPizza } from '../interfaces/pizza';
+import { dummyPizzas } from "../data/dummyPizzas";
+import { IPizza } from "../interfaces/pizza";
 
-export const fetchAllPizzas = async (): Promise<IPizza[]> => {
-  // TODO: Hent og returner pizzaer fra API istedenfor fra dummy-data
+/* export const fetchAllPizzas = async (): Promise<IPizza[]> => {
   return fetch('https://kjetilpizzaapi.azurewebsites.net/api/pizza')
     .then((res) => res.json())
     .then((data) => {
@@ -11,4 +11,10 @@ export const fetchAllPizzas = async (): Promise<IPizza[]> => {
       console.error(err);
       return [];
     });
+}; */
+
+export const fetchAllPizzas = async (): Promise<IPizza[]> => {
+  return new Promise((resolve) => {
+    resolve(dummyPizzas);
+  });
 };

@@ -5,17 +5,15 @@ import OrderItem from "../components/OrderItem";
 import OrderDetails from "../components/OrderDetails";
 
 import { IOrder } from "../interfaces/order";
-// import { fetchUserOrders } from "../api/fetchUserOrders";
-import { dummyOrders } from "../data/dummyOrders";
+import { fetchUserOrders } from "../api/fetchUserOrders";
 
 export default function MyOrders() {
   const [orders, setOrders] = useState<IOrder[]>([]);
   const [selectedOrder, setSelectedOrder] = useState<IOrder | undefined>();
 
   useEffect(() => {
-    // const userId = 1; // hardkodet bruker-ID
-    // fetchUserOrders(userId).then((response) => setOrders(response));
-    setOrders(dummyOrders);
+    const userId = 1; // hardkodet bruker-ID
+    fetchUserOrders(userId).then((response) => setOrders(response));
   }, []);
 
   return (

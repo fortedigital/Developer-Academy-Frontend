@@ -6,8 +6,7 @@ import ShoppingCart from "../components/ShoppingCart";
 
 import { IPizza } from "../interfaces/pizza";
 // import { IPostOrder } from "../interfaces/order";
-// import { fetchAllPizzas } from "../api/fetchAllPizzas";
-import { dummyPizzas } from "../data/dummyPizzas";
+import { fetchAllPizzas } from "../api/fetchAllPizzas";
 // import { postOrder } from "../api/postOrder";
 
 export default function NewOrder() {
@@ -15,8 +14,7 @@ export default function NewOrder() {
   const [shoppingCartItems, setShoppingCartItems] = useState<IPizza[]>([]);
 
   useEffect(() => {
-    // fetchAllPizzas().then((response) => setPizzas(response));
-    setPizzas(dummyPizzas);
+    fetchAllPizzas().then((response) => setPizzas(response));
   }, []);
 
   const handleAddToOrder = (pizza: IPizza) => {

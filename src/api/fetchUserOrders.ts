@@ -1,8 +1,7 @@
+import { dummyOrders } from "../data/dummyOrders";
 import { IOrder } from "./../interfaces/order";
 
-export const fetchUserOrders = async (userId?: number): Promise<IOrder[]> => {
-  // TODO: Hent og returner bestillinger fra API istedenfor fra dummy-data
-  // Kombiner API-endepunkt med userID-parameter
+/* export const fetchUserOrders = async (userId?: number): Promise<IOrder[]> => {
   return fetch(`https://kjetilpizzaapi.azurewebsites.net/api/orders/${userId}`)
     .then((res) => res.json())
     .then((data) => {
@@ -12,4 +11,10 @@ export const fetchUserOrders = async (userId?: number): Promise<IOrder[]> => {
       console.error(err);
       return [];
     });
+}; */
+
+export const fetchUserOrders = async (userId?: number): Promise<IOrder[]> => {
+  return new Promise((resolve) => {
+    resolve(dummyOrders);
+  });
 };

@@ -1,5 +1,3 @@
-import { IPizza } from './pizza';
-
 export interface IOrder {
   orderId: number;
   pizza: string[];

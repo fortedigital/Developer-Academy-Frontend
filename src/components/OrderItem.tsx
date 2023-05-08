@@ -31,7 +31,6 @@ export default function OrderItem({
       <Button onClick={() => onCheckDetails()} variant="ghost" size="small">
         Se detaljer
       </Button>
-      {/* TODO: Legg til "Se detaljer"-knapp med Button-komponent */}
     </div>
   );
 }
