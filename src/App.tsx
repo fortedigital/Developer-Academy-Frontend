@@ -1,9 +1,9 @@
 import React from "react";
-import NewOrder from "./pages/NewOrder";
-import MyOrders from "./pages/MyOrders";
-import NotFound from "./pages/NotFound";
-import Layout from "./components/Layout";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Layout from "@/components/Layout";
+import NewOrder from "@/pages/NewOrder";
+import NotFound from "@/pages/NotFound";
+import MyOrders from "@/pages/MyOrders";
 
 function App() {
     return (
