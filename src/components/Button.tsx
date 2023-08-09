@@ -16,10 +16,10 @@ export default function Button({
   return (
     <button
       onClick={onClick}
-      className={`flex-none rounded-md py-2 font-bold text-white
+      className={`flex-none rounded-md py-2 font-bold
       ${size === "large" ? "px-6" : "px-4 py-2 text-sm"} ${
         variant === "primary"
-          ? "bg-red-600 hover:bg-red-500 active:bg-red-700"
+          ? "text-white bg-red-600 hover:bg-red-500 active:bg-red-700"
           : variant === "secondary"
           ? "bg-stone-500 hover:bg-stone-400 active:bg-stone-600"
           : variant === "outlined"
