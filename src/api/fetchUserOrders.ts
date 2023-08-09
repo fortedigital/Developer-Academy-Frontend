@@ -14,7 +14,7 @@ import { IOrder } from "./../interfaces/order";
 }; */
 
 export const fetchUserOrders = async (userId?: number): Promise<IOrder[]> => {
-  return new Promise((resolve) => {
-    resolve(dummyOrders);
-  });
+    return new Promise((resolve) => {
+        resolve(dummyOrders);
+    });
 };

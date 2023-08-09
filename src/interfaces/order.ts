@@ -1,10 +1,10 @@
 export interface IOrder {
-  orderId: number;
-  pizza: string[];
-  price: number;
+    orderId: number;
+    pizza: string[];
+    price: number;
 }
 
 export interface IPostOrder {
-  userId?: number;
-  pizzaIds: number[];
+    userId?: number;
+    pizzaIds: number[];
 }
