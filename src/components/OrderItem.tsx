@@ -1,5 +1,5 @@
 import React from "react";
-import { IOrder } from "../interfaces/order";
+import { IOrder } from "@/interfaces/order";
 import Button from "./Button";
 
 type OrderItemProps = {

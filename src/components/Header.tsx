@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { isAuthenticated, signIn, signOut } from "../auth/authPopup";
+import { isAuthenticated, signIn, signOut } from "@/auth/authPopup";
 
 import Button from "./Button";
 

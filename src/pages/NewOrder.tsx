@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 
-import Heading from "../components/Heading";
-import PizzaCard from "../components/PizzaCard";
-import ShoppingCart from "../components/ShoppingCart";
+import Heading from "@/components/Heading";
+import PizzaCard from "@/components/PizzaCard";
+import ShoppingCart from "@/components/ShoppingCart";
 
-import { IPizza } from "../interfaces/pizza";
-// import { IPostOrder } from "../interfaces/order";
-import { fetchAllPizzas } from "../api/fetchAllPizzas";
-// import { postOrder } from "../api/postOrder";
+import { IPizza } from "@/interfaces/pizza";
+import { fetchAllPizzas } from "@/api/fetchAllPizzas";
+// import { IPostOrder } from "@/interfaces/order";
+// import { postOrder } from "@/api/postOrder";
 
 export default function NewOrder() {
     const [pizzas, setPizzas] = useState<IPizza[]>([]);
@@ -20,13 +20,13 @@ export default function NewOrder() {
     const handleAddToOrder = (pizza: IPizza) => {
         setShoppingCartItems((currentCartItems) => [
             ...currentCartItems,
-            pizza,
+            pizza
         ]);
     };
 
     const handleRemoveFromOrder = (itemIndex: number) => {
         const updatedCartItems = shoppingCartItems.filter(
-            (_, index) => index !== itemIndex,
+            (_, index) => index !== itemIndex
         );
 
         setShoppingCartItems(updatedCartItems);
@@ -46,7 +46,7 @@ export default function NewOrder() {
 
         alert(
             "Bestilling er fullført! \n\n" +
-                shoppingCartItems.map((item) => item.name + "\n").join(""),
+            shoppingCartItems.map((item) => item.name + "\n").join("")
         );
     };
 

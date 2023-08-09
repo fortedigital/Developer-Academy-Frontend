@@ -1,5 +1,5 @@
 import React from "react";
-import { IPizza } from "../interfaces/pizza";
+import { IPizza } from "@/interfaces/pizza";
 import Button from "./Button";
 
 type Props = {

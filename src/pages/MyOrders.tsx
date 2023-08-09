@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 
-import Heading from "../components/Heading";
-import OrderItem from "../components/OrderItem";
-import OrderDetails from "../components/OrderDetails";
+import Heading from "@/components/Heading";
+import OrderItem from "@/components/OrderItem";
+import OrderDetails from "@/components/OrderDetails";
 
-import { IOrder } from "../interfaces/order";
-import { fetchUserOrders } from "../api/fetchUserOrders";
+import { IOrder } from "@/interfaces/order";
+import { fetchUserOrders } from "@/api/fetchUserOrders";
 
 export default function MyOrders() {
     const [orders, setOrders] = useState<IOrder[]>([]);
