@@ -14,7 +14,7 @@ import { IPizza } from "../interfaces/pizza";
 }; */
 
 export const fetchAllPizzas = async (): Promise<IPizza[]> => {
-  return new Promise((resolve) => {
-    resolve(dummyPizzas);
-  });
+    return new Promise((resolve) => {
+        resolve(dummyPizzas);
+    });
 };
